@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper:7.4.0
@@ -16,6 +15,8 @@ services:
     ports:
       - "9092:9092"   # internal Docker network
       - "29092:29092" # host machine access
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
@@ -63,7 +64,7 @@ services:
               -c max_replication_slots=10
                
   minio:
-    image: minio/minio:latest
+    image: cgr.dev/chainguard/minio:latest
     command: server /data --console-address ":9001"
     environment:
       MINIO_ROOT_USER: ${MINIO_ROOT_USER}
