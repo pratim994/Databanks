@@ -1,6 +1,7 @@
 
 import time
 import psycopg2
+from decimal import Decimal, ROUND_DOWN
 #postgresql adapter for python 
 import argparse
 import sys
@@ -66,3 +67,64 @@ def run_iteration():
         customers.append(customer_id)
 
 
+    accounts = []
+    for customer_id in customers:
+        for _ in range(ACCOUNTS_PER_CUSTOMER):
+            account_type = random.choice(["SAVINGS", "CHECKING"])
+            initial_balance = random_money(INITIAL_BALANCE_MIN, INITIAL_BALANCE_MAX)
+            cur.execute(
+                    "INSERT INTO accounts (customers_id, account_type, balance, currency) VALUES (%s, %s, %s, %s) RETURNING id",
+                    (customer_id, account_type, initial_balance, CURRENCY),
+                )
+
+                account_id = cur.fetchone()[0]
+                accounts.append(account_id)
+
+
+
+    txn_types = ["DEPOSIT", "WITHDRAWAL", "TRANSFER"]
+    for _ in range(NUM_TRANSACTIONS):
+        account_id = random.choice(accounts)
+        txn_types = random.choice(txn_types)
+        account = round(random.uniform(1, MAX_TXN_AMOUNT),2)
+        related_account =  None
+
+        if txn_type == "TRANSFER" and len(accounts) > 1:
+            related_account = random.choice([a for a in accounts if a != account_id])
+
+
+        cur.execute(
+            "INSERT INTO transactions (account_id, txn_type, amount, related_account_id, status) VALUES (%s, %s, %s, %s, 'COMPLETED')",
+            (account_id, txn_type, amount, related_account),
+                )
+    
+    print(f"✅ Generated {len(customers)} customers, {len(accounts)} accounts, {NUM_TRANSACTIONS} transactions.")    
+
+
+
+
+try:
+    iteration = 0
+
+    while True:
+        iteration += 1
+        print(f"running {iteration} iteration")
+
+        run_iteration()
+
+
+        print(f"Iteration {iteration} finished")
+
+        if not LOOP:
+            break
+
+        time.sleep(SLEEP_SECONDS)
+
+except KeyboardInterrupt:
+    print("\n Interrupted by user :( ")
+
+
+finally:
+    cur.close()
+    conn.close()
+    sys.exit(0)
