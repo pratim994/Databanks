@@ -33,11 +33,73 @@ TABLES = ["customers", "accounts", "transactions"]
 
 
 def download_from_minio():
+    os.makedirs(LOCAL_DIR, exist_ok=True)
+
+    s3 =  boto3.client(
+          "s3",
+          endpoint_url=MINIO_ENDPOINT,
+          aws_access_key_id=MINIO_ACCESS_KEY,
+          aws_secret_access_key_id=MINIO_SECRET_ACCESS_KEY,
+    )
+    local_files =  {}
 
 
-def load_to_snowflake():
+    for table in TABLES:
+        prefix = f"{table}/"
+        resp = s3.list_objects_v2(Bucket=BUCKET, prefix)
+        objects = resp.get("Contents", [])
+        local_files[table] = []
+
+        for obj in objects:
+            key = obj["Key"]
+            local_file = os.path.join(LOCAL_DIR, os.path.basename(key))
+            s3.download_file(BUCKET, key, local_file)
+            print(f"Downloaded {key} -> {local_file}")
+            local_files[table].append(local_file)
+        return local_files
 
 
+def load_to_snowflake(**kwargs):
+    local_files = kwargs["ti"].xcom_pull(task_ids="download_minio")
+    if not local_files:
+        print(f"No files found in MinIO.")
+        return 
+
+    conn = snowflake.connector.connect(
+        user=SNOWFLAKE_USER,
+        password=SNOWFLAKE_PASSWORD,
+        account=SNOWFLAKE_ACCOUNT,
+        warehouse=SNOWFLAKE_WAREHOUSE,
+        database=SNOWFLAKE_DB,
+        schema=SNOWFLAKE_SCHEMA,
+    )
+
+    cur = conn.cursor()
+
+    for table, file in local_files.items():
+        if not files:
+            print(f"No files for {table} , skipping.")
+            continue
+
+        for f in files:
+
+            cur.execute(f"PUT file://{f} @%{table}")
+            print(f"Upload {f} -> @{table} stage")
+
+        copy_sql = f"""
+        COPY INTO {table}
+        FROM @%{table}
+        FILE_FORMAT=(TYPE=PARQUET)
+        ON_ERROR='CONTINUE'
+        """
+
+        cur.execute(copy_sql)
+        print(f"Data loaded into {table}")
+
+
+cur.close()
+conn.close()
+# its a  good practice to always close db connections , otherwise it will crash 
 
 default = {
     "owner" : "airflow",
