@@ -6,6 +6,8 @@ from decimal import Decimal, ROUND_DOWN
 import argparse
 import sys
 import os
+import random
+from faker import Faker
 
 from dotenv import load_dotenv
 
@@ -38,13 +40,13 @@ def random_money(min_val: Decimal, max_val: Decimal ) -> Decimal:
     return val.quantize(Decimal("0.01", rounding=ROUND_DOWN))
 
 
-conn = pyscopg2.connect(
-    host= os.getenv("POSTGRES_HOST")
-    port = os.getenv("POSTGRES_PORT")
-    dbname = os.getenv("POSTGRES_DB")
-    user =os.getenv("POSTGRES_USER") 
+conn = psycopg2.connect(
+    host= os.getenv("POSTGRES_HOST"),
+    port = os.getenv("POSTGRES_PORT"),
+    dbname = os.getenv("POSTGRES_DB"),
+    user =os.getenv("POSTGRES_USER"), 
     password = os.getenv("POSTGRES_PASSWORD")
-  )
+)
 
 conn.autocommit = True
 cur = conn.cursor()
@@ -77,8 +79,8 @@ def run_iteration():
                     (customer_id, account_type, initial_balance, CURRENCY),
                 )
 
-                account_id = cur.fetchone()[0]
-                accounts.append(account_id)
+            account_id = cur.fetchone()[0]
+            accounts.append(account_id)
 
 
 
