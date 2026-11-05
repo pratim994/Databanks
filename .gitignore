@@ -1,28 +1,93 @@
+
 .env
 .env.*
 !.env.example
-**/.env
-**/.env.*
-!.env.example
+*.pem
+*.key
+secrets/
+credentials/
+config/secrets/
+
+
 __pycache__/
 *.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+wheels/
+pip-wheel-metadata/
+
+
 .venv/
-banking_dbt/target/
-banking_dbt/logs/
-banking_dbt/dbt_packages/
+venv/
+env/
+ENV/
 
 
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
 
+
+*.log
+logs/
+**/logs/
+
+
+airflow.db
+airflow.cfg
+airflow-webserver.pid
+airflow-scheduler.pid
+airflow-worker.pid
+airflow-standalone.pid
+
+docker/logs/
+docker/plugins/
+docker/dags/__pycache__/
+
+
+**/target/
+**/dbt_packages/
+**/logs/
+**/partial_parse.msgpack
+**/semantic_manifest.json
+
+docker/minio/data/
 docker/postgres/data/
 
 
-docker/minio/data/
-docker/logs/
+**/xl.meta
+*.parquet
+*.avro
+*.orc
 
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.bak
+*.backup
 
-.venv/
-__pycache__/
-*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
+tmp/
+temp/
+*.tmp
+*.temp
+*.orig
+*.rej
 
+Thumbs.db
 .DS_Store
+Desktop.ini
+.Trash-*
