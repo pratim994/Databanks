@@ -1,0 +1,38 @@
+[2026-11-04T08:13:05.073+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-11-04T08:13:05.094+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: banking_data_pipeline.run_dbt_marts manual__2026-11-04T08:12:35+00:00 [queued]>
+[2026-11-04T08:13:05.099+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: banking_data_pipeline.run_dbt_marts manual__2026-11-04T08:12:35+00:00 [queued]>
+[2026-11-04T08:13:05.099+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2026-11-04T08:13:05.106+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): run_dbt_marts> on 2026-11-04 08:12:35+00:00
+[2026-11-04T08:13:05.112+0000] {standard_task_runner.py:64} INFO - Started process 524 to run task
+[2026-11-04T08:13:05.115+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'banking_data_pipeline', 'run_dbt_marts', 'manual__2026-11-04T08:12:35+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/banking_data_pipeline.py', '--cfg-path', '/tmp/tmpu7pdue_s']
+[2026-11-04T08:13:05.116+0000] {standard_task_runner.py:91} INFO - Job 24: Subtask run_dbt_marts
+[2026-11-04T08:13:05.152+0000] {task_command.py:426} INFO - Running <TaskInstance: banking_data_pipeline.run_dbt_marts manual__2026-11-04T08:12:35+00:00 [running]> on host 788420869afa
+[2026-11-04T08:13:05.215+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-platform' AIRFLOW_CTX_DAG_ID='banking_data_pipeline' AIRFLOW_CTX_TASK_ID='run_dbt_marts' AIRFLOW_CTX_EXECUTION_DATE='2026-11-04T08:12:35+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-11-04T08:12:35+00:00'
+[2026-11-04T08:13:05.215+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-11-04T08:13:05.223+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-11-04T08:13:05.224+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/banking_dbt && dbt run --select path:models/marts --profiles-dir /home/***/.dbt']
+[2026-11-04T08:13:05.237+0000] {subprocess.py:86} INFO - Output:
+[2026-11-04T08:13:06.312+0000] {subprocess.py:93} INFO - [0m08:13:06  Running with dbt=1.8.8
+[2026-11-04T08:13:06.427+0000] {subprocess.py:93} INFO - [0m08:13:06  Registered adapter: postgres=1.8.2
+[2026-11-04T08:13:06.602+0000] {subprocess.py:93} INFO - [0m08:13:06  Found 8 models, 2 snapshots, 32 data tests, 3 sources, 424 macros
+[2026-11-04T08:13:06.603+0000] {subprocess.py:93} INFO - [0m08:13:06
+[2026-11-04T08:13:06.678+0000] {subprocess.py:93} INFO - [0m08:13:06  Concurrency: 4 threads (target='local')
+[2026-11-04T08:13:06.678+0000] {subprocess.py:93} INFO - [0m08:13:06
+[2026-11-04T08:13:06.685+0000] {subprocess.py:93} INFO - [0m08:13:06  1 of 3 START sql table model analytics.dim_accounts ............................ [RUN]
+[2026-11-04T08:13:06.686+0000] {subprocess.py:93} INFO - [0m08:13:06  2 of 3 START sql table model analytics.dim_customers ........................... [RUN]
+[2026-11-04T08:13:06.687+0000] {subprocess.py:93} INFO - [0m08:13:06  3 of 3 START sql incremental model analytics.fact_transactions ................. [RUN]
+[2026-11-04T08:13:06.876+0000] {subprocess.py:93} INFO - [0m08:13:06  1 of 3 OK created sql table model analytics.dim_accounts ....................... [[32mSELECT 61[0m in 0.19s]
+[2026-11-04T08:13:06.877+0000] {subprocess.py:93} INFO - [0m08:13:06  2 of 3 OK created sql table model analytics.dim_customers ...................... [[32mSELECT 70[0m in 0.19s]
+[2026-11-04T08:13:06.891+0000] {subprocess.py:93} INFO - [0m08:13:06  3 of 3 OK created sql incremental model analytics.fact_transactions ............ [[32mINSERT 0 150[0m in 0.20s]
+[2026-11-04T08:13:06.900+0000] {subprocess.py:93} INFO - [0m08:13:06
+[2026-11-04T08:13:06.900+0000] {subprocess.py:93} INFO - [0m08:13:06  Finished running 2 table models, 1 incremental model in 0 hours 0 minutes and 0.30 seconds (0.30s).
+[2026-11-04T08:13:06.920+0000] {subprocess.py:93} INFO - [0m08:13:06
+[2026-11-04T08:13:06.920+0000] {subprocess.py:93} INFO - [0m08:13:06  [32mCompleted successfully[0m
+[2026-11-04T08:13:06.920+0000] {subprocess.py:93} INFO - [0m08:13:06
+[2026-11-04T08:13:06.921+0000] {subprocess.py:93} INFO - [0m08:13:06  Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+[2026-11-04T08:13:08.393+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-11-04T08:13:08.393+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-11-04T08:13:08.425+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=banking_data_pipeline, task_id=run_dbt_marts, run_id=manual__2026-11-04T08:12:35+00:00, execution_date=20261104T081235, start_date=20261104T081305, end_date=20261104T081308
+[2026-11-04T08:13:08.459+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-11-04T08:13:08.479+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-11-04T08:13:08.479+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

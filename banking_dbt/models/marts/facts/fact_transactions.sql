@@ -1,5 +1,5 @@
 
-{{ config(materialized='incremental', unique_key='transaction_id') }}
+{{ config(materialized='incremental', unique_key='transaction_id', incremental_strategy='delete+insert') }}
 
 SELECT
 	t.transaction_id,
@@ -10,7 +10,7 @@ SELECT
 	t.status,
 	t.transaction_type,
 	t.transaction_time,
-	CURRENT_TIMESTAMP AS load_timestamp
+    t.load_timestamp
 FROM {{ ref('stg_transactions') }} t
 LEFT JOIN {{ ref('stg_accounts') }} a
   ON t.account_id = a.account_id

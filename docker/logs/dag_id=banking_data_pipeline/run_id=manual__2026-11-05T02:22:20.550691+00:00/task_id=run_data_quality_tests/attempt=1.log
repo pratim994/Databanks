@@ -1,0 +1,96 @@
+[2026-11-05T02:22:40.388+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-11-05T02:22:40.405+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: banking_data_pipeline.run_data_quality_tests manual__2026-11-05T02:22:20.550691+00:00 [queued]>
+[2026-11-05T02:22:40.408+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: banking_data_pipeline.run_data_quality_tests manual__2026-11-05T02:22:20.550691+00:00 [queued]>
+[2026-11-05T02:22:40.408+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2026-11-05T02:22:40.413+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): run_data_quality_tests> on 2026-11-05 02:22:20.550691+00:00
+[2026-11-05T02:22:40.418+0000] {standard_task_runner.py:64} INFO - Started process 423 to run task
+[2026-11-05T02:22:40.420+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'banking_data_pipeline', 'run_data_quality_tests', 'manual__2026-11-05T02:22:20.550691+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/banking_data_pipeline.py', '--cfg-path', '/tmp/tmpf08ncqrn']
+[2026-11-05T02:22:40.421+0000] {standard_task_runner.py:91} INFO - Job 95: Subtask run_data_quality_tests
+[2026-11-05T02:22:40.452+0000] {task_command.py:426} INFO - Running <TaskInstance: banking_data_pipeline.run_data_quality_tests manual__2026-11-05T02:22:20.550691+00:00 [running]> on host 788420869afa
+[2026-11-05T02:22:40.500+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-platform' AIRFLOW_CTX_DAG_ID='banking_data_pipeline' AIRFLOW_CTX_TASK_ID='run_data_quality_tests' AIRFLOW_CTX_EXECUTION_DATE='2026-11-05T02:22:20.550691+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-11-05T02:22:20.550691+00:00'
+[2026-11-05T02:22:40.500+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-11-05T02:22:40.506+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-11-05T02:22:40.506+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/banking_dbt && dbt test --profiles-dir /home/***/.dbt']
+[2026-11-05T02:22:40.517+0000] {subprocess.py:86} INFO - Output:
+[2026-11-05T02:22:41.587+0000] {subprocess.py:93} INFO - [0m02:22:41  Running with dbt=1.8.8
+[2026-11-05T02:22:41.705+0000] {subprocess.py:93} INFO - [0m02:22:41  Registered adapter: postgres=1.8.2
+[2026-11-05T02:22:41.890+0000] {subprocess.py:93} INFO - [0m02:22:41  Found 8 models, 2 snapshots, 32 data tests, 3 sources, 424 macros
+[2026-11-05T02:22:41.892+0000] {subprocess.py:93} INFO - [0m02:22:41
+[2026-11-05T02:22:41.952+0000] {subprocess.py:93} INFO - [0m02:22:41  Concurrency: 4 threads (target='local')
+[2026-11-05T02:22:41.952+0000] {subprocess.py:93} INFO - [0m02:22:41
+[2026-11-05T02:22:41.959+0000] {subprocess.py:93} INFO - [0m02:22:41  1 of 32 START test accepted_values_stg_accounts_currency__USD__EUR__GBP__INR__CAD__AUD  [RUN]
+[2026-11-05T02:22:41.959+0000] {subprocess.py:93} INFO - [0m02:22:41  2 of 32 START test accepted_values_stg_transactions_transaction_type__DEPOSIT__WITHDRAWAL__TRANSFER  [RUN]
+[2026-11-05T02:22:41.960+0000] {subprocess.py:93} INFO - [0m02:22:41  3 of 32 START test not_null_dim_accounts_account_key ........................... [RUN]
+[2026-11-05T02:22:41.961+0000] {subprocess.py:93} INFO - [0m02:22:41  4 of 32 START test not_null_dim_accounts_account_natural_key ................... [RUN]
+[2026-11-05T02:22:42.016+0000] {subprocess.py:93} INFO - [0m02:22:42  2 of 32 PASS accepted_values_stg_transactions_transaction_type__DEPOSIT__WITHDRAWAL__TRANSFER  [[32mPASS[0m in 0.05s]
+[2026-11-05T02:22:42.017+0000] {subprocess.py:93} INFO - [0m02:22:42  3 of 32 PASS not_null_dim_accounts_account_key ................................. [[32mPASS[0m in 0.06s]
+[2026-11-05T02:22:42.020+0000] {subprocess.py:93} INFO - [0m02:22:42  5 of 32 START test not_null_dim_customers_customer_key ......................... [RUN]
+[2026-11-05T02:22:42.021+0000] {subprocess.py:93} INFO - [0m02:22:42  4 of 32 PASS not_null_dim_accounts_account_natural_key ......................... [[32mPASS[0m in 0.06s]
+[2026-11-05T02:22:42.022+0000] {subprocess.py:93} INFO - [0m02:22:42  6 of 32 START test not_null_dim_customers_customer_natural_key ................. [RUN]
+[2026-11-05T02:22:42.022+0000] {subprocess.py:93} INFO - [0m02:22:42  1 of 32 PASS accepted_values_stg_accounts_currency__USD__EUR__GBP__INR__CAD__AUD  [[32mPASS[0m in 0.06s]
+[2026-11-05T02:22:42.084+0000] {subprocess.py:93} INFO - [0m02:22:42  7 of 32 START test not_null_fact_transactions_transaction_id ................... [RUN]
+[2026-11-05T02:22:42.089+0000] {subprocess.py:93} INFO - [0m02:22:42  8 of 32 START test not_null_stg_account_snapshot_source_account_id ............. [RUN]
+[2026-11-05T02:22:42.120+0000] {subprocess.py:93} INFO - [0m02:22:42  5 of 32 PASS not_null_dim_customers_customer_key ............................... [[32mPASS[0m in 0.10s]
+[2026-11-05T02:22:42.125+0000] {subprocess.py:93} INFO - [0m02:22:42  6 of 32 PASS not_null_dim_customers_customer_natural_key ....................... [[32mPASS[0m in 0.10s]
+[2026-11-05T02:22:42.126+0000] {subprocess.py:93} INFO - [0m02:22:42  9 of 32 START test not_null_stg_account_snapshot_source_is_deleted ............. [RUN]
+[2026-11-05T02:22:42.127+0000] {subprocess.py:93} INFO - [0m02:22:42  7 of 32 PASS not_null_fact_transactions_transaction_id ......................... [[32mPASS[0m in 0.04s]
+[2026-11-05T02:22:42.130+0000] {subprocess.py:93} INFO - [0m02:22:42  10 of 32 START test not_null_stg_accounts_account_id ........................... [RUN]
+[2026-11-05T02:22:42.130+0000] {subprocess.py:93} INFO - [0m02:22:42  8 of 32 PASS not_null_stg_account_snapshot_source_account_id ................... [[32mPASS[0m in 0.04s]
+[2026-11-05T02:22:42.135+0000] {subprocess.py:93} INFO - [0m02:22:42  11 of 32 START test not_null_stg_accounts_balance .............................. [RUN]
+[2026-11-05T02:22:42.139+0000] {subprocess.py:93} INFO - [0m02:22:42  12 of 32 START test not_null_stg_accounts_customer_id .......................... [RUN]
+[2026-11-05T02:22:42.168+0000] {subprocess.py:93} INFO - [0m02:22:42  9 of 32 PASS not_null_stg_account_snapshot_source_is_deleted ................... [[32mPASS[0m in 0.04s]
+[2026-11-05T02:22:42.172+0000] {subprocess.py:93} INFO - [0m02:22:42  13 of 32 START test not_null_stg_customer_snapshot_source_customer_id .......... [RUN]
+[2026-11-05T02:22:42.173+0000] {subprocess.py:93} INFO - [0m02:22:42  10 of 32 PASS not_null_stg_accounts_account_id ................................. [[32mPASS[0m in 0.04s]
+[2026-11-05T02:22:42.180+0000] {subprocess.py:93} INFO - [0m02:22:42  11 of 32 PASS not_null_stg_accounts_balance .................................... [[32mPASS[0m in 0.04s]
+[2026-11-05T02:22:42.180+0000] {subprocess.py:93} INFO - [0m02:22:42  14 of 32 START test not_null_stg_customer_snapshot_source_is_deleted ........... [RUN]
+[2026-11-05T02:22:42.181+0000] {subprocess.py:93} INFO - [0m02:22:42  12 of 32 PASS not_null_stg_accounts_customer_id ................................ [[32mPASS[0m in 0.04s]
+[2026-11-05T02:22:42.185+0000] {subprocess.py:93} INFO - [0m02:22:42  15 of 32 START test not_null_stg_customers_customer_id ......................... [RUN]
+[2026-11-05T02:22:42.190+0000] {subprocess.py:93} INFO - [0m02:22:42  16 of 32 START test not_null_stg_customers_email ............................... [RUN]
+[2026-11-05T02:22:42.214+0000] {subprocess.py:93} INFO - [0m02:22:42  13 of 32 PASS not_null_stg_customer_snapshot_source_customer_id ................ [[32mPASS[0m in 0.04s]
+[2026-11-05T02:22:42.218+0000] {subprocess.py:93} INFO - [0m02:22:42  17 of 32 START test not_null_stg_transactions_account_id ....................... [RUN]
+[2026-11-05T02:22:42.222+0000] {subprocess.py:93} INFO - [0m02:22:42  14 of 32 PASS not_null_stg_customer_snapshot_source_is_deleted ................. [[32mPASS[0m in 0.04s]
+[2026-11-05T02:22:42.224+0000] {subprocess.py:93} INFO - [0m02:22:42  16 of 32 PASS not_null_stg_customers_email ..................................... [[32mPASS[0m in 0.03s]
+[2026-11-05T02:22:42.224+0000] {subprocess.py:93} INFO - [0m02:22:42  15 of 32 PASS not_null_stg_customers_customer_id ............................... [[32mPASS[0m in 0.03s]
+[2026-11-05T02:22:42.228+0000] {subprocess.py:93} INFO - [0m02:22:42  18 of 32 START test not_null_stg_transactions_amount ........................... [RUN]
+[2026-11-05T02:22:42.230+0000] {subprocess.py:93} INFO - [0m02:22:42  19 of 32 START test not_null_stg_transactions_transaction_id ................... [RUN]
+[2026-11-05T02:22:42.230+0000] {subprocess.py:93} INFO - [0m02:22:42  20 of 32 START test relationships_dim_accounts_customer_id__customer_natural_key__ref_dim_customers_  [RUN]
+[2026-11-05T02:22:42.260+0000] {subprocess.py:93} INFO - [0m02:22:42  17 of 32 PASS not_null_stg_transactions_account_id ............................. [[32mPASS[0m in 0.04s]
+[2026-11-05T02:22:42.264+0000] {subprocess.py:93} INFO - [0m02:22:42  21 of 32 START test relationships_fact_transactions_account_id__account_natural_key__ref_dim_accounts_  [RUN]
+[2026-11-05T02:22:42.276+0000] {subprocess.py:93} INFO - [0m02:22:42  20 of 32 PASS relationships_dim_accounts_customer_id__customer_natural_key__ref_dim_customers_  [[32mPASS[0m in 0.04s]
+[2026-11-05T02:22:42.277+0000] {subprocess.py:93} INFO - [0m02:22:42  18 of 32 PASS not_null_stg_transactions_amount ................................. [[32mPASS[0m in 0.05s]
+[2026-11-05T02:22:42.277+0000] {subprocess.py:93} INFO - [0m02:22:42  19 of 32 PASS not_null_stg_transactions_transaction_id ......................... [[32mPASS[0m in 0.04s]
+[2026-11-05T02:22:42.282+0000] {subprocess.py:93} INFO - [0m02:22:42  22 of 32 START test relationships_stg_accounts_customer_id__customer_id__ref_stg_customers_  [RUN]
+[2026-11-05T02:22:42.283+0000] {subprocess.py:93} INFO - [0m02:22:42  23 of 32 START test relationships_stg_transactions_account_id__account_id__ref_stg_accounts_  [RUN]
+[2026-11-05T02:22:42.283+0000] {subprocess.py:93} INFO - [0m02:22:42  24 of 32 START test unique_dim_accounts_account_key ............................ [RUN]
+[2026-11-05T02:22:42.313+0000] {subprocess.py:93} INFO - [0m02:22:42  21 of 32 PASS relationships_fact_transactions_account_id__account_natural_key__ref_dim_accounts_  [[32mPASS[0m in 0.05s]
+[2026-11-05T02:22:42.314+0000] {subprocess.py:93} INFO - [0m02:22:42  25 of 32 START test unique_dim_customers_customer_key .......................... [RUN]
+[2026-11-05T02:22:42.325+0000] {subprocess.py:93} INFO - [0m02:22:42  23 of 32 PASS relationships_stg_transactions_account_id__account_id__ref_stg_accounts_  [[32mPASS[0m in 0.04s]
+[2026-11-05T02:22:42.328+0000] {subprocess.py:93} INFO - [0m02:22:42  26 of 32 START test unique_fact_transactions_transaction_id .................... [RUN]
+[2026-11-05T02:22:42.331+0000] {subprocess.py:93} INFO - [0m02:22:42  24 of 32 PASS unique_dim_accounts_account_key .................................. [[32mPASS[0m in 0.05s]
+[2026-11-05T02:22:42.332+0000] {subprocess.py:93} INFO - [0m02:22:42  22 of 32 PASS relationships_stg_accounts_customer_id__customer_id__ref_stg_customers_  [[32mPASS[0m in 0.05s]
+[2026-11-05T02:22:42.337+0000] {subprocess.py:93} INFO - [0m02:22:42  27 of 32 START test unique_stg_account_snapshot_source_account_id .............. [RUN]
+[2026-11-05T02:22:42.341+0000] {subprocess.py:93} INFO - [0m02:22:42  28 of 32 START test unique_stg_accounts_account_id ............................. [RUN]
+[2026-11-05T02:22:42.355+0000] {subprocess.py:93} INFO - [0m02:22:42  25 of 32 PASS unique_dim_customers_customer_key ................................ [[32mPASS[0m in 0.04s]
+[2026-11-05T02:22:42.363+0000] {subprocess.py:93} INFO - [0m02:22:42  29 of 32 START test unique_stg_customer_snapshot_source_customer_id ............ [RUN]
+[2026-11-05T02:22:42.375+0000] {subprocess.py:93} INFO - [0m02:22:42  26 of 32 PASS unique_fact_transactions_transaction_id .......................... [[32mPASS[0m in 0.05s]
+[2026-11-05T02:22:42.380+0000] {subprocess.py:93} INFO - [0m02:22:42  30 of 32 START test unique_stg_customers_customer_id ........................... [RUN]
+[2026-11-05T02:22:42.390+0000] {subprocess.py:93} INFO - [0m02:22:42  28 of 32 PASS unique_stg_accounts_account_id ................................... [[32mPASS[0m in 0.05s]
+[2026-11-05T02:22:42.391+0000] {subprocess.py:93} INFO - [0m02:22:42  27 of 32 PASS unique_stg_account_snapshot_source_account_id .................... [[32mPASS[0m in 0.05s]
+[2026-11-05T02:22:42.397+0000] {subprocess.py:93} INFO - [0m02:22:42  31 of 32 START test unique_stg_customers_email ................................. [RUN]
+[2026-11-05T02:22:42.397+0000] {subprocess.py:93} INFO - [0m02:22:42  32 of 32 START test unique_stg_transactions_transaction_id ..................... [RUN]
+[2026-11-05T02:22:42.412+0000] {subprocess.py:93} INFO - [0m02:22:42  29 of 32 PASS unique_stg_customer_snapshot_source_customer_id .................. [[32mPASS[0m in 0.05s]
+[2026-11-05T02:22:42.418+0000] {subprocess.py:93} INFO - [0m02:22:42  30 of 32 PASS unique_stg_customers_customer_id ................................. [[32mPASS[0m in 0.04s]
+[2026-11-05T02:22:42.425+0000] {subprocess.py:93} INFO - [0m02:22:42  32 of 32 PASS unique_stg_transactions_transaction_id ........................... [[32mPASS[0m in 0.03s]
+[2026-11-05T02:22:42.425+0000] {subprocess.py:93} INFO - [0m02:22:42  31 of 32 PASS unique_stg_customers_email ....................................... [[32mPASS[0m in 0.03s]
+[2026-11-05T02:22:42.434+0000] {subprocess.py:93} INFO - [0m02:22:42
+[2026-11-05T02:22:42.434+0000] {subprocess.py:93} INFO - [0m02:22:42  Finished running 32 data tests in 0 hours 0 minutes and 0.54 seconds (0.54s).
+[2026-11-05T02:22:42.457+0000] {subprocess.py:93} INFO - [0m02:22:42
+[2026-11-05T02:22:42.457+0000] {subprocess.py:93} INFO - [0m02:22:42  [32mCompleted successfully[0m
+[2026-11-05T02:22:42.458+0000] {subprocess.py:93} INFO - [0m02:22:42
+[2026-11-05T02:22:42.458+0000] {subprocess.py:93} INFO - [0m02:22:42  Done. PASS=32 WARN=0 ERROR=0 SKIP=0 TOTAL=32
+[2026-11-05T02:22:43.826+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-11-05T02:22:43.827+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-11-05T02:22:43.846+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=banking_data_pipeline, task_id=run_data_quality_tests, run_id=manual__2026-11-05T02:22:20.550691+00:00, execution_date=20261105T022220, start_date=20261105T022240, end_date=20261105T022243
+[2026-11-05T02:22:43.879+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-11-05T02:22:43.893+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-11-05T02:22:43.893+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,271 @@
+[2026-11-04T07:11:10.323+0000] {processor.py:161} INFO - Started process (PID=34) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:11:10.324+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:11:10.325+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:11:10.325+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:11:10.327+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:11:10.326+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 27
+    catchup=False,
+    ^^^^^^^^^^^^^
+SyntaxError: keyword argument repeated: catchup
+[2026-11-04T07:11:10.327+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:11:10.339+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.020 seconds
+[2026-11-04T07:11:40.462+0000] {processor.py:161} INFO - Started process (PID=36) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:11:40.462+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:11:40.463+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:11:40.463+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:11:40.465+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:11:40.464+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 27
+    catchup=False,
+    ^^^^^^^^^^^^^
+SyntaxError: keyword argument repeated: catchup
+[2026-11-04T07:11:40.465+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:11:40.479+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.021 seconds
+[2026-11-04T07:12:10.604+0000] {processor.py:161} INFO - Started process (PID=38) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:12:10.605+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:12:10.605+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:12:10.605+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:12:10.607+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:12:10.606+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 27
+    catchup=False,
+    ^^^^^^^^^^^^^
+SyntaxError: keyword argument repeated: catchup
+[2026-11-04T07:12:10.607+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:12:10.619+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.017 seconds
+[2026-11-04T07:12:40.729+0000] {processor.py:161} INFO - Started process (PID=40) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:12:40.729+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:12:40.730+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:12:40.730+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:12:40.732+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:12:40.732+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 27
+    catchup=False,
+    ^^^^^^^^^^^^^
+SyntaxError: keyword argument repeated: catchup
+[2026-11-04T07:12:40.732+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:12:40.743+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.017 seconds
+[2026-11-04T07:13:10.852+0000] {processor.py:161} INFO - Started process (PID=42) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:13:10.855+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:13:10.856+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:13:10.856+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:13:10.858+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:13:10.858+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 27
+    catchup=False,
+    ^^^^^^^^^^^^^
+SyntaxError: keyword argument repeated: catchup
+[2026-11-04T07:13:10.858+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:13:10.871+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.022 seconds
+[2026-11-04T07:13:40.966+0000] {processor.py:161} INFO - Started process (PID=44) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:13:40.966+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:13:40.967+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:13:40.967+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:13:40.969+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:13:40.968+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 27
+    catchup=False,
+    ^^^^^^^^^^^^^
+SyntaxError: keyword argument repeated: catchup
+[2026-11-04T07:13:40.969+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:13:40.981+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.018 seconds
+[2026-11-04T07:14:11.104+0000] {processor.py:161} INFO - Started process (PID=52) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:14:11.105+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:14:11.106+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:14:11.106+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:14:11.108+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:14:11.108+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 27
+    catchup=False,
+    ^^^^^^^^^^^^^
+SyntaxError: keyword argument repeated: catchup
+[2026-11-04T07:14:11.109+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:14:11.125+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.025 seconds
+[2026-11-04T07:14:41.231+0000] {processor.py:161} INFO - Started process (PID=54) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:14:41.232+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:14:41.233+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:14:41.232+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:14:41.234+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:14:41.234+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 27
+    catchup=False,
+    ^^^^^^^^^^^^^
+SyntaxError: keyword argument repeated: catchup
+[2026-11-04T07:14:41.234+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:14:41.247+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.019 seconds
+[2026-11-04T07:14:46.259+0000] {processor.py:161} INFO - Started process (PID=55) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:14:46.268+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:14:46.270+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:14:46.270+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:14:46.272+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:14:46.271+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 21, in <module>
+    dag_id=-"SCD2_snapshots",
+           ^^^^^^^^^^^^^^^^^
+TypeError: bad operand type for unary -: 'str'
+[2026-11-04T07:14:46.272+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:14:46.287+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.031 seconds
+[2026-11-04T07:15:16.434+0000] {processor.py:161} INFO - Started process (PID=58) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:15:16.435+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:15:16.436+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:15:16.436+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:15:16.439+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:15:16.438+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 21, in <module>
+    dag_id=-"SCD2_snapshots",
+           ^^^^^^^^^^^^^^^^^
+TypeError: bad operand type for unary -: 'str'
+[2026-11-04T07:15:16.439+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:15:16.453+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.023 seconds
+[2026-11-04T07:15:46.575+0000] {processor.py:161} INFO - Started process (PID=66) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:15:46.585+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:15:46.586+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:15:46.586+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:15:46.588+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:15:46.587+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 21, in <module>
+    dag_id=-"SCD2_snapshots",
+           ^^^^^^^^^^^^^^^^^
+TypeError: bad operand type for unary -: 'str'
+[2026-11-04T07:15:46.588+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:15:46.602+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.032 seconds
+[2026-11-04T07:16:16.726+0000] {processor.py:161} INFO - Started process (PID=68) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:16:16.727+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:16:16.728+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:16:16.728+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:16:16.730+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:16:16.730+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 21, in <module>
+    dag_id=-"SCD2_snapshots",
+           ^^^^^^^^^^^^^^^^^
+TypeError: bad operand type for unary -: 'str'
+[2026-11-04T07:16:16.731+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:16:16.743+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.021 seconds
+[2026-11-04T07:16:46.894+0000] {processor.py:161} INFO - Started process (PID=73) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:16:46.902+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:16:46.904+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:16:46.903+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:16:46.906+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:16:46.905+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 21, in <module>
+    dag_id=-"SCD2_snapshots",
+           ^^^^^^^^^^^^^^^^^
+TypeError: bad operand type for unary -: 'str'
+[2026-11-04T07:16:46.906+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:16:46.921+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.031 seconds
+[2026-11-04T07:17:17.115+0000] {processor.py:161} INFO - Started process (PID=77) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:17:17.116+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:17:17.117+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:17:17.117+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:17:17.119+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:17:17.118+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 21, in <module>
+    dag_id=-"SCD2_snapshots",
+           ^^^^^^^^^^^^^^^^^
+TypeError: bad operand type for unary -: 'str'
+[2026-11-04T07:17:17.119+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:17:17.135+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.024 seconds
+[2026-11-04T07:17:47.227+0000] {processor.py:161} INFO - Started process (PID=81) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:17:47.235+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:17:47.236+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:17:47.236+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:17:47.238+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:17:47.238+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 21, in <module>
+    dag_id=-"SCD2_snapshots",
+           ^^^^^^^^^^^^^^^^^
+TypeError: bad operand type for unary -: 'str'
+[2026-11-04T07:17:47.239+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:17:47.252+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.029 seconds
+[2026-11-04T07:18:17.353+0000] {processor.py:161} INFO - Started process (PID=85) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:18:17.353+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:18:17.354+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:18:17.354+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:18:17.357+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:18:17.356+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 21, in <module>
+    dag_id=-"SCD2_snapshots",
+           ^^^^^^^^^^^^^^^^^
+TypeError: bad operand type for unary -: 'str'
+[2026-11-04T07:18:17.357+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:18:17.372+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.024 seconds
+[2026-11-04T07:18:47.479+0000] {processor.py:161} INFO - Started process (PID=89) to work on /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:18:47.488+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/scd_snapshots.py for tasks to queue
+[2026-11-04T07:18:47.489+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:18:47.489+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:18:47.491+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:18:47.490+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/scd_snapshots.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/scd_snapshots.py", line 21, in <module>
+    dag_id=-"SCD2_snapshots",
+           ^^^^^^^^^^^^^^^^^
+TypeError: bad operand type for unary -: 'str'
+[2026-11-04T07:18:47.491+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/scd_snapshots.py
+[2026-11-04T07:18:47.508+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/scd_snapshots.py took 0.033 seconds

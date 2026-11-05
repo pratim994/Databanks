@@ -12,7 +12,8 @@ from faker import Faker
 from dotenv import load_dotenv
 
 
-load_dotenv()
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+load_dotenv(os.path.join(ROOT_DIR, ".env"))
 
 
 NUM_CUSTOMERS = 10
@@ -37,12 +38,12 @@ fake = Faker()
 
 def random_money(min_val: Decimal, max_val: Decimal ) -> Decimal:
     val = Decimal(str(random.uniform(float(min_val), float(max_val))))
-    return val.quantize(Decimal("0.01", rounding=ROUND_DOWN))
+    return val.quantize(Decimal("0.01"), rounding=ROUND_DOWN)
 
 
 conn = psycopg2.connect(
-    host= os.getenv("POSTGRES_HOST"),
-    port = os.getenv("POSTGRES_PORT"),
+    host= os.getenv("POSTGRES_HOST", "localhost"),
+    port = os.getenv("POSTGRES_PORT", "5433"),
     dbname = os.getenv("POSTGRES_DB"),
     user =os.getenv("POSTGRES_USER"), 
     password = os.getenv("POSTGRES_PASSWORD")
@@ -75,7 +76,7 @@ def run_iteration():
             account_type = random.choice(["SAVINGS", "CHECKING"])
             initial_balance = random_money(INITIAL_BALANCE_MIN, INITIAL_BALANCE_MAX)
             cur.execute(
-                    "INSERT INTO accounts (customers_id, account_type, balance, currency) VALUES (%s, %s, %s, %s) RETURNING id",
+                    "INSERT INTO accounts (customer_id, account_type, balance, currency) VALUES (%s, %s, %s, %s) RETURNING id",
                     (customer_id, account_type, initial_balance, CURRENCY),
                 )
 
@@ -87,8 +88,8 @@ def run_iteration():
     txn_types = ["DEPOSIT", "WITHDRAWAL", "TRANSFER"]
     for _ in range(NUM_TRANSACTIONS):
         account_id = random.choice(accounts)
-        txn_types = random.choice(txn_types)
-        account = round(random.uniform(1, MAX_TXN_AMOUNT),2)
+        txn_type = random.choice(txn_types)
+        amount = round(random.uniform(1, MAX_TXN_AMOUNT),2)
         related_account =  None
 
         if txn_type == "TRANSFER" and len(accounts) > 1:
@@ -129,4 +130,3 @@ except KeyboardInterrupt:
 finally:
     cur.close()
     conn.close()
-    sys.exit(0)

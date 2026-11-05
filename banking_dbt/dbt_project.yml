@@ -15,5 +15,9 @@ clean-targets:
 
 models:
   banking_dbt:
-    example:
+    staging:
+      +schema: staging
       +materialized: view
+    marts:
+      +schema: analytics
+      +materialized: table

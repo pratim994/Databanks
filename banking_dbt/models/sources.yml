@@ -2,9 +2,20 @@ version: 2
 
 sources:
   - name: raw
-    database: BANKING
-    schema: RAW
+    schema: raw
     tables:
       - name: customers
+        loaded_at_field: ingestion_timestamp
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 72, period: hour}
       - name: accounts
+        loaded_at_field: ingestion_timestamp
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 72, period: hour}
       - name: transactions
+        loaded_at_field: ingestion_timestamp
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 72, period: hour}

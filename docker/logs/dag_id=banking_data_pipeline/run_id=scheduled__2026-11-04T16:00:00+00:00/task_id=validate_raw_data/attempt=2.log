@@ -1,0 +1,37 @@
+[2026-11-04T17:10:13.453+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-11-04T17:10:13.473+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: banking_data_pipeline.validate_raw_data scheduled__2026-11-04T16:00:00+00:00 [queued]>
+[2026-11-04T17:10:13.478+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: banking_data_pipeline.validate_raw_data scheduled__2026-11-04T16:00:00+00:00 [queued]>
+[2026-11-04T17:10:13.478+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 3
+[2026-11-04T17:10:13.483+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): validate_raw_data> on 2026-11-04 16:00:00+00:00
+[2026-11-04T17:10:13.488+0000] {standard_task_runner.py:64} INFO - Started process 837 to run task
+[2026-11-04T17:10:13.491+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'banking_data_pipeline', 'validate_raw_data', 'scheduled__2026-11-04T16:00:00+00:00', '--job-id', '40', '--raw', '--subdir', 'DAGS_FOLDER/banking_data_pipeline.py', '--cfg-path', '/tmp/tmpqubta1oj']
+[2026-11-04T17:10:13.492+0000] {standard_task_runner.py:91} INFO - Job 40: Subtask validate_raw_data
+[2026-11-04T17:10:13.525+0000] {task_command.py:426} INFO - Running <TaskInstance: banking_data_pipeline.validate_raw_data scheduled__2026-11-04T16:00:00+00:00 [running]> on host 788420869afa
+[2026-11-04T17:10:13.576+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-platform' AIRFLOW_CTX_DAG_ID='banking_data_pipeline' AIRFLOW_CTX_TASK_ID='validate_raw_data' AIRFLOW_CTX_EXECUTION_DATE='2026-11-04T16:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-11-04T16:00:00+00:00'
+[2026-11-04T17:10:13.577+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-11-04T17:10:13.587+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-11-04T17:10:13.587+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 460, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/banking_data_pipeline.py", line 86, in validate_raw_data
+    raise ValueError(f"Raw data quality check {label!r} failed for {count} rows")
+ValueError: Raw data quality check 'transactions' failed for 8 rows
+[2026-11-04T17:10:13.594+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=banking_data_pipeline, task_id=validate_raw_data, run_id=scheduled__2026-11-04T16:00:00+00:00, execution_date=20261104T160000, start_date=20261104T171013, end_date=20261104T171013
+[2026-11-04T17:10:13.599+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 40 for task validate_raw_data (Raw data quality check 'transactions' failed for 8 rows; 837)
+[2026-11-04T17:10:13.622+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2026-11-04T17:10:13.641+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-11-04T17:10:13.642+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

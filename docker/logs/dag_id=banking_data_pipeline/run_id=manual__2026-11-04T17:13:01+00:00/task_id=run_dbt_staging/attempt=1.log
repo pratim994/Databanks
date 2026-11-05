@@ -1,0 +1,42 @@
+[2026-11-04T17:16:47.365+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-11-04T17:16:47.385+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: banking_data_pipeline.run_dbt_staging manual__2026-11-04T17:13:01+00:00 [queued]>
+[2026-11-04T17:16:47.389+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: banking_data_pipeline.run_dbt_staging manual__2026-11-04T17:13:01+00:00 [queued]>
+[2026-11-04T17:16:47.390+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 3
+[2026-11-04T17:16:47.396+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): run_dbt_staging> on 2026-11-04 17:13:01+00:00
+[2026-11-04T17:16:47.401+0000] {standard_task_runner.py:64} INFO - Started process 1177 to run task
+[2026-11-04T17:16:47.403+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'banking_data_pipeline', 'run_dbt_staging', 'manual__2026-11-04T17:13:01+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/banking_data_pipeline.py', '--cfg-path', '/tmp/tmptma8luhc']
+[2026-11-04T17:16:47.404+0000] {standard_task_runner.py:91} INFO - Job 54: Subtask run_dbt_staging
+[2026-11-04T17:16:47.434+0000] {task_command.py:426} INFO - Running <TaskInstance: banking_data_pipeline.run_dbt_staging manual__2026-11-04T17:13:01+00:00 [running]> on host 788420869afa
+[2026-11-04T17:16:47.493+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data-platform' AIRFLOW_CTX_DAG_ID='banking_data_pipeline' AIRFLOW_CTX_TASK_ID='run_dbt_staging' AIRFLOW_CTX_EXECUTION_DATE='2026-11-04T17:13:01+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-11-04T17:13:01+00:00'
+[2026-11-04T17:16:47.494+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-11-04T17:16:47.500+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-11-04T17:16:47.500+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/***/banking_dbt && dbt run --select path:models/staging --profiles-dir /home/***/.dbt']
+[2026-11-04T17:16:47.514+0000] {subprocess.py:86} INFO - Output:
+[2026-11-04T17:16:48.644+0000] {subprocess.py:93} INFO - [0m17:16:48  Running with dbt=1.8.8
+[2026-11-04T17:16:48.759+0000] {subprocess.py:93} INFO - [0m17:16:48  Registered adapter: postgres=1.8.2
+[2026-11-04T17:16:48.927+0000] {subprocess.py:93} INFO - [0m17:16:48  Found 8 models, 2 snapshots, 32 data tests, 3 sources, 424 macros
+[2026-11-04T17:16:48.929+0000] {subprocess.py:93} INFO - [0m17:16:48
+[2026-11-04T17:16:48.998+0000] {subprocess.py:93} INFO - [0m17:16:48  Concurrency: 4 threads (target='local')
+[2026-11-04T17:16:48.998+0000] {subprocess.py:93} INFO - [0m17:16:48
+[2026-11-04T17:16:49.005+0000] {subprocess.py:93} INFO - [0m17:16:49  1 of 5 START sql view model staging.stg_account_snapshot_source ................ [RUN]
+[2026-11-04T17:16:49.005+0000] {subprocess.py:93} INFO - [0m17:16:49  2 of 5 START sql view model staging.stg_customer_snapshot_source ............... [RUN]
+[2026-11-04T17:16:49.005+0000] {subprocess.py:93} INFO - [0m17:16:49  3 of 5 START sql view model staging.stg_transactions ........................... [RUN]
+[2026-11-04T17:16:49.171+0000] {subprocess.py:93} INFO - [0m17:16:49  1 of 5 OK created sql view model staging.stg_account_snapshot_source ........... [[32mCREATE VIEW[0m in 0.16s]
+[2026-11-04T17:16:49.172+0000] {subprocess.py:93} INFO - [0m17:16:49  3 of 5 OK created sql view model staging.stg_transactions ...................... [[32mCREATE VIEW[0m in 0.16s]
+[2026-11-04T17:16:49.172+0000] {subprocess.py:93} INFO - [0m17:16:49  2 of 5 OK created sql view model staging.stg_customer_snapshot_source .......... [[32mCREATE VIEW[0m in 0.17s]
+[2026-11-04T17:16:49.175+0000] {subprocess.py:93} INFO - [0m17:16:49  4 of 5 START sql view model staging.stg_accounts ............................... [RUN]
+[2026-11-04T17:16:49.175+0000] {subprocess.py:93} INFO - [0m17:16:49  5 of 5 START sql view model staging.stg_customers .............................. [RUN]
+[2026-11-04T17:16:49.212+0000] {subprocess.py:93} INFO - [0m17:16:49  5 of 5 OK created sql view model staging.stg_customers ......................... [[32mCREATE VIEW[0m in 0.04s]
+[2026-11-04T17:16:49.213+0000] {subprocess.py:93} INFO - [0m17:16:49  4 of 5 OK created sql view model staging.stg_accounts .......................... [[32mCREATE VIEW[0m in 0.04s]
+[2026-11-04T17:16:49.221+0000] {subprocess.py:93} INFO - [0m17:16:49
+[2026-11-04T17:16:49.222+0000] {subprocess.py:93} INFO - [0m17:16:49  Finished running 5 view models in 0 hours 0 minutes and 0.29 seconds (0.29s).
+[2026-11-04T17:16:49.241+0000] {subprocess.py:93} INFO - [0m17:16:49
+[2026-11-04T17:16:49.241+0000] {subprocess.py:93} INFO - [0m17:16:49  [32mCompleted successfully[0m
+[2026-11-04T17:16:49.241+0000] {subprocess.py:93} INFO - [0m17:16:49
+[2026-11-04T17:16:49.242+0000] {subprocess.py:93} INFO - [0m17:16:49  Done. PASS=5 WARN=0 ERROR=0 SKIP=0 TOTAL=5
+[2026-11-04T17:16:51.016+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-11-04T17:16:51.017+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-11-04T17:16:51.032+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=banking_data_pipeline, task_id=run_dbt_staging, run_id=manual__2026-11-04T17:13:01+00:00, execution_date=20261104T171301, start_date=20261104T171647, end_date=20261104T171651
+[2026-11-04T17:16:51.064+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2026-11-04T17:16:51.082+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-11-04T17:16:51.083+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

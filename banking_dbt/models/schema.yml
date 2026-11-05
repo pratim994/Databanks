@@ -1,0 +1,79 @@
+version: 2
+
+models:
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        data_tests: [not_null, unique]
+      - name: email
+        data_tests: [not_null, unique]
+  - name: stg_customer_snapshot_source
+    columns:
+      - name: customer_id
+        data_tests: [not_null, unique]
+      - name: is_deleted
+        data_tests: [not_null]
+  - name: stg_account_snapshot_source
+    columns:
+      - name: account_id
+        data_tests: [not_null, unique]
+      - name: is_deleted
+        data_tests: [not_null]
+  - name: stg_accounts
+    columns:
+      - name: account_id
+        data_tests: [not_null, unique]
+      - name: customer_id
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+      - name: balance
+        data_tests: [not_null]
+      - name: currency
+        data_tests:
+          - accepted_values:
+              values: ['USD', 'EUR', 'GBP', 'INR', 'CAD', 'AUD']
+  - name: stg_transactions
+    columns:
+      - name: transaction_id
+        data_tests: [not_null, unique]
+      - name: account_id
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('stg_accounts')
+              field: account_id
+      - name: amount
+        data_tests: [not_null]
+      - name: transaction_type
+        data_tests:
+          - accepted_values:
+              values: ['DEPOSIT', 'WITHDRAWAL', 'TRANSFER']
+  - name: dim_customers
+    columns:
+      - name: customer_key
+        data_tests: [not_null, unique]
+      - name: customer_natural_key
+        data_tests: [not_null]
+  - name: dim_accounts
+    columns:
+      - name: account_key
+        data_tests: [not_null, unique]
+      - name: account_natural_key
+        data_tests: [not_null]
+      - name: customer_id
+        data_tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_natural_key
+  - name: fact_transactions
+    columns:
+      - name: transaction_id
+        data_tests: [not_null, unique]
+      - name: account_id
+        data_tests:
+          - relationships:
+              to: ref('dim_accounts')
+              field: account_natural_key

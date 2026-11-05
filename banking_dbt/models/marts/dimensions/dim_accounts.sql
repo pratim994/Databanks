@@ -1,22 +1,24 @@
+{{ config(materialized='table') }}
 
-{{ config(materialed='table') }}
+SELECT
+    md5(account_id::text || ':' || dbt_scd_id) AS account_key,
+    dbt_scd_id,
+    account_id AS account_natural_key,
+    account_id,
+    customer_id,
+    account_type,
+    balance,
+    currency,
+    created_at,
 
-WITH source_data AS (
-	SELECT
-		account_id,
-		customer_id,
-		account_type,
-		balance,
-		currency,
-		created_at,
-		dbt_valid_from AS effective_from,
-		dbt_valid_to   AS effective_to,
-		CASE WEN dbt_valid_to IS NULL THEN TRUE ELSE FALSE AND END AS is_current
+    dbt_valid_from AS effective_from,
+    dbt_valid_to AS effective_to,
+    dbt_updated_at,
 
-	FROM {{ ref('accounts_snapshot') }}
+    CASE
+        WHEN dbt_valid_to IS NULL THEN TRUE
+        ELSE FALSE
+    END AS is_current
 
-
-)
-
-
-SELECT * FROM source_data
+FROM {{ ref('accounts_snapshot') }}
+WHERE NOT is_deleted

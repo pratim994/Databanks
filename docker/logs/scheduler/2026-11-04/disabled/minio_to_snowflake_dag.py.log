@@ -1,0 +1,296 @@
+[2026-11-04T07:11:10.314+0000] {processor.py:161} INFO - Started process (PID=33) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:11:10.314+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:11:10.315+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:11:10.315+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:11:10.318+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:11:10.317+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 62
+    return local_files
+    ^^^^^^
+SyntaxError: invalid syntax
+[2026-11-04T07:11:10.318+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:11:10.334+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.024 seconds
+[2026-11-04T07:11:40.455+0000] {processor.py:161} INFO - Started process (PID=35) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:11:40.456+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:11:40.457+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:11:40.457+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:11:40.459+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:11:40.459+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 62
+    return local_files
+    ^^^^^^
+SyntaxError: invalid syntax
+[2026-11-04T07:11:40.460+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:11:40.473+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.022 seconds
+[2026-11-04T07:12:10.600+0000] {processor.py:161} INFO - Started process (PID=37) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:12:10.601+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:12:10.602+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:12:10.602+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:12:10.604+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:12:10.604+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 62
+    return local_files
+    ^^^^^^
+SyntaxError: invalid syntax
+[2026-11-04T07:12:10.604+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:12:10.616+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.019 seconds
+[2026-11-04T07:12:40.724+0000] {processor.py:161} INFO - Started process (PID=39) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:12:40.724+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:12:40.725+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:12:40.725+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:12:40.728+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:12:40.727+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 62
+    return local_files
+    ^^^^^^
+SyntaxError: invalid syntax
+[2026-11-04T07:12:40.728+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:12:40.741+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.020 seconds
+[2026-11-04T07:13:10.846+0000] {processor.py:161} INFO - Started process (PID=41) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:13:10.857+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:13:10.858+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:13:10.858+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:13:10.861+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:13:10.860+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 62
+    return local_files
+    ^^^^^^
+SyntaxError: invalid syntax
+[2026-11-04T07:13:10.861+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:13:10.874+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.031 seconds
+[2026-11-04T07:13:40.961+0000] {processor.py:161} INFO - Started process (PID=43) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:13:40.961+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:13:40.962+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:13:40.962+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:13:40.965+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:13:40.964+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 62
+    return local_files
+    ^^^^^^
+SyntaxError: invalid syntax
+[2026-11-04T07:13:40.965+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:13:40.979+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.021 seconds
+[2026-11-04T07:14:11.097+0000] {processor.py:161} INFO - Started process (PID=51) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:14:11.105+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:14:11.106+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:14:11.106+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:14:11.109+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:14:11.108+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 62
+    return local_files
+    ^^^^^^
+SyntaxError: invalid syntax
+[2026-11-04T07:14:11.109+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:14:11.125+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.032 seconds
+[2026-11-04T07:14:41.226+0000] {processor.py:161} INFO - Started process (PID=53) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:14:41.227+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:14:41.227+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:14:41.227+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:14:41.230+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:14:41.229+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 62
+    return local_files
+    ^^^^^^
+SyntaxError: invalid syntax
+[2026-11-04T07:14:41.230+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:14:41.243+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.021 seconds
+[2026-11-04T07:15:11.370+0000] {processor.py:161} INFO - Started process (PID=56) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:15:11.380+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:15:11.381+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:15:11.381+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:15:11.384+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:15:11.383+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 62
+    return local_files
+    ^^^^^^
+SyntaxError: invalid syntax
+[2026-11-04T07:15:11.384+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:15:11.397+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.030 seconds
+[2026-11-04T07:15:15.401+0000] {processor.py:161} INFO - Started process (PID=57) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:15:15.402+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:15:15.403+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:15:15.403+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:15:15.406+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:15:15.406+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 128
+    )
+    ^
+SyntaxError: unmatched ')'
+[2026-11-04T07:15:15.406+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:15:15.422+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.025 seconds
+[2026-11-04T07:15:45.562+0000] {processor.py:161} INFO - Started process (PID=65) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:15:45.570+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:15:45.572+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:15:45.572+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:15:45.575+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:15:45.575+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 128
+    )
+    ^
+SyntaxError: unmatched ')'
+[2026-11-04T07:15:45.575+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:15:45.589+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.031 seconds
+[2026-11-04T07:16:09.689+0000] {processor.py:161} INFO - Started process (PID=67) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:16:09.689+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:16:09.690+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:16:09.690+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:16:09.693+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:16:09.692+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 120
+    schedule_interval="*/1 * * * *"
+                      
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+[2026-11-04T07:16:09.693+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:16:09.705+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.019 seconds
+[2026-11-04T07:16:39.822+0000] {processor.py:161} INFO - Started process (PID=69) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:16:39.830+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:16:39.831+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:16:39.831+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:16:39.834+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:16:39.833+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 936, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1004, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 120
+    schedule_interval="*/1 * * * *"
+                      
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+[2026-11-04T07:16:39.834+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:16:39.848+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.029 seconds
+[2026-11-04T07:16:43.852+0000] {processor.py:161} INFO - Started process (PID=70) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:16:43.853+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:16:43.854+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:16:43.854+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:16:45.190+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:16:45.189+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 103, in <module>
+    cur.close()
+    ^^^
+NameError: name 'cur' is not defined
+[2026-11-04T07:16:45.190+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:16:45.199+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 1.352 seconds
+[2026-11-04T07:17:11.085+0000] {processor.py:161} INFO - Started process (PID=74) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:17:11.093+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:17:11.094+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:17:11.094+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:17:11.435+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:17:11.434+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 103, in <module>
+    cur.close()
+    ^^^
+NameError: name 'cur' is not defined
+[2026-11-04T07:17:11.435+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:17:11.449+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.368 seconds
+[2026-11-04T07:17:42.205+0000] {processor.py:161} INFO - Started process (PID=78) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:17:42.206+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:17:42.208+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:17:42.207+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:17:42.529+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:17:42.528+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 103, in <module>
+    cur.close()
+    ^^^
+NameError: name 'cur' is not defined
+[2026-11-04T07:17:42.529+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:17:42.544+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.342 seconds
+[2026-11-04T07:18:13.325+0000] {processor.py:161} INFO - Started process (PID=82) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:18:13.326+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:18:13.327+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:18:13.326+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:18:13.646+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:18:13.645+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 103, in <module>
+    cur.close()
+    ^^^
+NameError: name 'cur' is not defined
+[2026-11-04T07:18:13.647+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:18:13.663+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.343 seconds
+[2026-11-04T07:18:44.451+0000] {processor.py:161} INFO - Started process (PID=86) to work on /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:18:44.451+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/disabled/minio_to_snowflake_dag.py for tasks to queue
+[2026-11-04T07:18:44.453+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:18:44.452+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:18:44.797+0000] {logging_mixin.py:188} INFO - [2026-11-04T07:18:44.796+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/disabled/minio_to_snowflake_dag.py", line 103, in <module>
+    cur.close()
+    ^^^
+NameError: name 'cur' is not defined
+[2026-11-04T07:18:44.797+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/disabled/minio_to_snowflake_dag.py
+[2026-11-04T07:18:44.820+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/disabled/minio_to_snowflake_dag.py took 0.375 seconds
