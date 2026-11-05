@@ -1,11 +1,10 @@
-
 name: CI
 
 on:
   push:
-    branches: [ main, dev ]
+    branches: [main, dev]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   tests:
@@ -15,61 +14,66 @@ jobs:
       postgres:
         image: postgres:15
         env:
-          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
-          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          POSTGRES_USER: banking_user
+          POSTGRES_PASSWORD: banking_test_password
           POSTGRES_DB: banking
         ports:
           - 5432:5432
         options: >-
-          --health-cmd pg_isready
+          --health-cmd "pg_isready -U banking_user -d banking"
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: pip
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install dbt-snowflake
+          pip install dbt-postgres ruff pytest
 
       - name: Run linters
-        run: |
-          pip install ruff
-          ruff check .
+        run: ruff check .
 
       - name: Run unit tests
         run: |
-          pip install pytest
-          pytest tests/ || echo "No tests yet"
+          if [ -d tests ]; then
+            pytest tests/
+          else
+            echo "No tests directory found; skipping unit tests."
+          fi
 
       - name: Setup dbt profile
         run: |
           mkdir -p ~/.dbt
-          cat > ~/.dbt/profiles.yml <<EOL
+          cat > ~/.dbt/profiles.yml <<'EOF'
           banking_dbt:
             target: dev
             outputs:
               dev:
-                type: snowflake
-                account: ${{ secrets.SNOWFLAKE_ACCOUNT }}
-                user: ${{ secrets.SNOWFLAKE_USER }}
-                password: ${{ secrets.SNOWFLAKE_PASSWORD }}
-                role: ACCOUNTADMIN
-                database: BANKING
-                warehouse: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
-                schema: ANALYTICS
-          EOL
+                type: postgres
+                host: localhost
+                user: banking_user
+                password: banking_test_password
+                port: 5432
+                dbname: banking
+                schema: analytics
+                threads: 4
+          EOF
 
-      - name: dbt compile (validation)
-        run: |
-          cd banking_dbt
-          dbt deps
-          dbt compile
+      - name: dbt dependencies
+        working-directory: banking_dbt
+        run: dbt deps
+
+      - name: dbt compile
+        working-directory: banking_dbt
+        run: dbt compile
